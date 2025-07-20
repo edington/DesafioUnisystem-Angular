@@ -1,0 +1,21 @@
+  <button type="submit" class="lists-button"  [routerLink]="['/login']" > Sair</button>   
+
+
+<div class="tabela-container">
+  <h3>Lista de Usuários</h3>
+
+  <div class="tabela-cabecalho">
+    <div class="coluna">Nome</div>
+    <div class="coluna">Email</div>
+  </div>
+
+  <div class="tabela-linha" *ngFor="let user of users">
+    <div class="coluna">{{ user.name }}</div>
+    <div class="coluna">{{ user.email}}</div>
+  </div>
+</div>
+
+
+<div *ngIf="users.length === 0">
+    Nenhum usuário encontrado.
+  </div>

@@ -1,0 +1,14 @@
+<form (ngSubmit)="login()" class="login-form">
+    <a [routerLink]="['/createUser']" class="register-label">Login</a> <br> <br/>
+
+  <input type="email" [(ngModel)]="user.email" name="email" required placeholder="Email" > <br/> <br/>
+  <input type="password" [(ngModel)]="user.password" name="password" required placeholder="Senha"> <br/> <br/>
+  <button type="submit" class="login-button" >Entrar</button><br/>
+  
+  <div style="display: flex; gap: 16px;">
+  <a style="color:black;">Não tem cadastro?</a> 
+  <a [routerLink]="['/createUser']" class="register-link">Cadastre-se</a>
+  </div>
+
+  <p class="error-message" class="register-erro" *ngIf="erro">{{ erro }}</p>
+</form>

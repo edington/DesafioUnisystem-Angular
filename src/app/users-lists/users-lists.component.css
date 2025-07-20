@@ -1,0 +1,49 @@
+.tabela-container {  
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.tabela-cabecalho, .tabela-linha {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 2.75rem;
+}
+
+.tabela-cabecalho {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+.tabela-linha:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.coluna {
+  padding: 8px;
+}
+
+.lists-button {
+  position: fixed;
+  top: 20px;     
+  right: 20px;    
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  z-index: 1000;  
+  cursor: pointer;
+}

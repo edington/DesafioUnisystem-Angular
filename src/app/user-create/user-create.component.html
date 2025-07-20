@@ -1,0 +1,14 @@
+
+
+<form (ngSubmit)="createUser()" class="content" class="main">
+  <br/>
+  <input type="name" [(ngModel)]="user.name" name="name" required placeholder="Nome" class="user-create-label "><br/><br/>
+  <input type="email" [(ngModel)]="user.email" name="email" required placeholder="Email" class="user-create-label "><br/><br/>
+  <input type="password" [(ngModel)]="user.password" name="password" required placeholder="Senha" class="user-create-label "><br/><br/>
+  <div class="button-group">
+  <button type="submit" class="user-create-button"  >Cadastrar</button>   
+  <button type="submit" class="user-create-button" [routerLink]="['/login']"  >Voltar</button>   
+  </div>
+  <p *ngIf="message">{{ message }}</p>
+</form>
+
