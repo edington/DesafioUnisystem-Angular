@@ -10,10 +10,12 @@ export class JwtInterceptor implements HttpInterceptor {
     if (token) {
       req = req.clone({
         setHeaders: {
+          
           Authorization: `Bearer ${token}`
         }
       });
     }
+    console.log('Interceptando requisição com token:', token);
     return next.handle(req);
   }
 }

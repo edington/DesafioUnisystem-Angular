@@ -26,10 +26,10 @@ export class UserCreateComponent {
    createUser() {
     this.auth.createUser(this.user).subscribe({
       next: (res) => {
-       this.router.navigate(['/users']);
+        this.message = "Cadastro efetuado."
       },
       error: (err) => {
-        this.message = 'O cadastro falhou: ' + (err.error?.message || 'erro desconhecido');
+        this.message = (err.error?.message || 'erro desconhecido');
       }
     });
   }
